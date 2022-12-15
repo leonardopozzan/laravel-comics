@@ -1,6 +1,15 @@
 @use './variables' as *;
 @use './mixins' as *;
 @import '~bootstrap/scss/bootstrap';
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.my-container{
+    max-width: 1070px;
+    margin: auto;
+}
 img{
     max-width: 100%;
 }
@@ -51,5 +60,58 @@ a{
         padding: 0.8rem;
         background-color: $blue;
         @include myText(1rem,bold);
+    }
+}
+main{
+    background-color: $dark-dc;
+    .inner-main{
+        padding: 2rem 0;
+        .cards{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -1rem;
+            padding-bottom: 1rem;
+            .flip-card{
+                width: calc(100% / 6);
+                height: 285px;
+                padding: 0.5rem;
+                background-color: white;
+                border: 4px solid $dark-dc;
+                perspective: 1000px;
+                border-radius: 1rem;
+                .flip-card-inner{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    transition: transform 0.6s;
+                    transform-style: preserve-3d;
+                    .flip-card-front, .flip-card-back{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        -webkit-backface-visibility: hidden;
+                        backface-visibility: hidden;
+                        
+                    }
+                    .flip-card-back{
+                        transform: rotateY(180deg);
+                    }
+                }
+                &:hover .flip-card-inner{
+                    transform: rotateY(180deg);
+                }
+                .title{
+                    @include myText(0.9rem);
+                    color: black; 
+                }
+                .img-box{
+                    height: 200px;
+                    overflow: hidden;
+                    margin-bottom: 0.5rem;
+                }
+                
+            }
+        }
     }
 }

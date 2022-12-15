@@ -8,15 +8,25 @@
         </div>
     </div>
 </div>
-
-
-
-    <ul>
-        @foreach ($comics as $comic)
-            <li>
-                {{$comic['title']}}
-            </li>
-        @endforeach
-    </ul>
+<div class="inner-main">
+    <div class="my-container">
+        <div class="cards">
+            @foreach ($comics as $comic)
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="img-box"><img src="{{$comic['thumb']}}" alt=""></div>
+                        <span class="title">{{$comic['series']}}</span>
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="img-box"><img src="{{$comic['thumb']}}" alt=""></div>
+                        <span class="title">{{$comic['price']}}</span>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</div>
     
 @endsection
