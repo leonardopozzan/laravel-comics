@@ -21,3 +21,8 @@ Route::get('/', function () {
 Route::get('/characters', function () {
     return view('characters');
 })->name('characters');
+
+Route::get('/singlepage', function () {
+    $comics = config('comicsdb.comics');
+    return view('singlepage', compact('comics'));
+})->name('singlepage');
