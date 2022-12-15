@@ -1,1 +1,55 @@
-@import '~bootstrap/scss/bootstrap'
+@use './variables' as *;
+@use './mixins' as *;
+@import '~bootstrap/scss/bootstrap';
+img{
+    max-width: 100%;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.nav-bar{
+    height: 100px;
+    @include dflex('between');
+    .logo-img{
+        width: 90px
+    }
+    .links{
+        @include dflex();
+        li{
+            line-height: 97px;
+            padding: 0 0.7rem;
+            border-bottom: 3px solid transparent;
+            transition: 0.3s;
+            text-transform: uppercase;
+            font-weight: bold;
+            &.active{
+                a{
+                    color: $blue;
+                }
+            }
+            &.active,
+            &:hover{
+                border-bottom: 3px solid $blue;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.jumbo{
+    background-image: url('/resources/img/jumbotron.jpg');
+    background-size: cover;
+    height: 400px;
+    position: relative;
+    .title{
+        position: absolute;
+        bottom: 0px; 
+        transform: translate( 0, 50%);
+        padding: 0.8rem;
+        background-color: $blue;
+        @include myText(1rem,bold);
+    }
+}
