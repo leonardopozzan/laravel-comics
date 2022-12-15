@@ -55,3 +55,19 @@ $linksSites = config('comicsdb.linksSites');
         <div class="img-box"><img src="{{Vite::asset('/resources/img/dc-logo-bg.png' )}}" alt=""></div>
     </div>
 </section>
+
+<section class="contacts-wrap">
+    <div class="my-container contacts">
+        <button>sign-up now</button>
+        <div class="social">
+            <span>follow us</span>
+            <ul>
+                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li> 
+                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li> 
+                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>  
+                <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>  
+                <li><a href="#"><i class="fa-brands fa-periscope"></i></a></li> 
+            </ul>
+        </div>
+    </div>
+</section>
