@@ -1,5 +1,10 @@
 <?php 
 $linksImage = config('comicsdb.linksImage');
+$linksComics = config('comicsdb.linksComics');
+$linksShop = config('comicsdb.linksShop');
+$linksDc = config('comicsdb.linksDc');
+$linksSites = config('comicsdb.linksSites');
+
 ?>
 
 <section class="icons-wrap">
@@ -12,32 +17,41 @@ $linksImage = config('comicsdb.linksImage');
         @endforeach
     </div>
 </section>
-{{-- <section class="links-footer">
+
+<section class="links-footer">
     <div class="my-container links-wrap">
         <div class="links">
             <div class="link">
                 <span class="title">dc comics</span>
                 <ul>
-                    <li v-for="(link, i) in linksComics" :key="i"><a href="link.url">{{link.text}}</a></li>
+                    @foreach ($linksComics as $link)
+                    <li><a href="{{$link['url']}}">{{$link['text']}}</a></li>
+                    @endforeach
                 </ul>
                 <span class="title">shop</span>
                 <ul>
-                    <li v-for="(link, i) in linksShop" :key="i"><a href="link.url">{{link.text}}</a></li>
+                    @foreach ($linksShop as $link)
+                    <li><a href="{{$link['url']}}">{{$link['text']}}</a></li>
+                    @endforeach
                 </ul>
             </div>
             <div class="link">
                 <span class="title">dc</span>
                 <ul>
-                    <li v-for="(link, i) in linksDc" :key="i"><a href="link.url">{{link.text}}</a></li>
+                    @foreach ($linksDc as $link)
+                    <li><a href="{{$link['url']}}">{{$link['text']}}</a></li>
+                    @endforeach
                 </ul>
             </div>
             <div class="link">
                 <span class="title">sites</span>
                 <ul>
-                    <li v-for="(link, i) in linksSites" :key="i"><a href="link.url">{{link.text}}</a></li>
+                    @foreach ($linksSites as $link)
+                    <li><a href="{{$link['url']}}">{{$link['text']}}</a></li>
+                    @endforeach
                 </ul>
             </div>
         </div>
-        <div class="img-box"><img src="/img/dc-logo-bg.png" alt=""></div>
+        <div class="img-box"><img src="{{Vite::asset('/resources/img/dc-logo-bg.png' )}}" alt=""></div>
     </div>
-</section> --}}
+</section>

@@ -285,6 +285,149 @@ return [
             "text"=> 'dc power visa',
             "url"=> 'buy-dc-power-visa.svg'
         ]
-    ]
+        ],
+        "linksComics" => [
+            [
+                "text"=> "Characters",
+                "url"=> "#",
+                "active"=> false,
+            ],
+            [
+                "text"=> "Comics",
+                "url"=> "#",
+                "active"=> true,
+            ],
+            [
+                "text"=> "Movies",
+                "url"=> "#",
+                "active"=> false,
+            ],
+            [
+                "text"=> "TV",
+                "url"=> "#",
+                "active"=> false,
+            ],
+            [
+                "text"=> "Games",
+                "url"=> "#",
+                "active"=> false,
+            ],
+            [
+                "text"=> "Collectibles",
+                "url"=> "#",
+                "active"=> false,
+            ],
+            [
+                "text"=> "Videos",
+                "url"=> "#",
+                "active"=> false,
+            ],
+            [
+                "text"=> "Fans",
+                "url"=> "#",
+                "active"=> false,
+            ],
+            [
+                "text"=> "News",
+                "url"=> "#",
+                "active"=> false,
+            ],
+        ],
+           "linksShop" => [
+            [
+                "text"=> "Shop DC",
+                "url"=> "#",
+                "active"=> false,
+            ],
+            [
+                "text"=> "Shop DC Collectibles",
+                "url"=> "#",
+                "active"=> false,
+            ],
+        ],
+           "linksDc" => [
+            [
+                "text"=> "Terms Of Use",
+                "url"=> "#",
+                "active"=> false,
+            ],
+            [
+                "text"=> "Privacy Policy (New)",
+                "url"=> "#",
+                "active"=> false,
+            ],
+            [
+                "text"=> "Add Choices",
+                "url"=> "#",
+                "active"=> false,
+            ],
+            [
+                "text"=> "Advertising",
+                "url"=> "#",
+                "active"=> false,
+            ],
+            [
+                "text"=> "Jobs",
+                "url"=> "#",
+                "active"=> false,
+            ],
+            [
+                "text"=> "Subscriptions",
+                "url"=> "#",
+                "active"=> false,
+            ],
+            [
+                "text"=> "Talent Workshops",
+                "url"=> "#",
+                "active"=> false,
+            ],
+            [
+                "text"=> "CPSC Certificates",
+                "url"=> "#",
+                "active"=> false,
+            ],
+            [
+                "text"=> "Ratings",
+                "url"=> "#",
+                "active"=> false,
+            ],
+            [
+                "text"=> "Shop Help",
+                "url"=> "#",
+                "active"=> false,
+            ],
+            [
+                "text"=> "Contacts Us",
+                "url"=> "#",
+                "active"=> false,
+            ]
+            ],
+           "linksSites" => [
+            [
+                "text"=> "DC",
+                "url"=> "#",
+                "active"=> false,
+            ],
+            [
+                "text"=> "MAD Magazine",
+                "url"=> "#",
+                "active"=> false,
+            ],
+            [
+                "text"=> "DC Kids",
+                "url"=> "#",
+                "active"=> false,
+            ],
+            [
+                "text"=> "DC Universe",
+                "url"=> "#",
+                "active"=> false,
+            ],
+            [
+                "text"=> "DC Power Visa",
+                "url"=> "#",
+                "active"=> false,
+            ],
+          ]
 ];
 
