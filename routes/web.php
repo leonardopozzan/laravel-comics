@@ -22,7 +22,67 @@ Route::get('/characters', function () {
     return view('characters');
 })->name('characters');
 
-Route::get('/singlepage', function () {
-    $comics = config('comicsdb.comics');
+Route::get('/singlepage0', function () {
+    $comics = config('comicsdb.comics.0');
+    return view('singlepage', compact('comics'));
+})->name('singlepage');
+
+Route::get('/singlepage1', function () {
+    $comics = config('comicsdb.comics.1');
+    return view('singlepage', compact('comics'));
+})->name('singlepage');
+
+Route::get('/singlepage2', function () {
+    $comics = config('comicsdb.comics.2');
+    return view('singlepage', compact('comics'));
+})->name('singlepage');
+
+Route::get('/singlepage3', function () {
+    $comics = config('comicsdb.comics.3');
+    return view('singlepage', compact('comics'));
+})->name('singlepage');
+
+Route::get('/singlepage4', function () {
+    $comics = config('comicsdb.comics.4');
+    return view('singlepage', compact('comics'));
+})->name('singlepage');
+
+Route::get('/singlepage5', function () {
+    $comics = config('comicsdb.comics.5');
+    return view('singlepage', compact('comics'));
+})->name('singlepage');
+
+Route::get('/singlepage6', function () {
+    $comics = config('comicsdb.comics.6');
+    return view('singlepage', compact('comics'));
+})->name('singlepage');
+
+Route::get('/singlepage7', function () {
+    $comics = config('comicsdb.comics.7');
+    return view('singlepage', compact('comics'));
+})->name('singlepage');
+
+Route::get('/singlepage8', function () {
+    $comics = config('comicsdb.comics.8');
+    return view('singlepage', compact('comics'));
+})->name('singlepage');
+
+Route::get('/singlepage9', function () {
+    $comics = config('comicsdb.comics.9');
+    return view('singlepage', compact('comics'));
+})->name('singlepage');
+
+Route::get('/singlepage10', function () {
+    $comics = config('comicsdb.comics.10');
+    return view('singlepage', compact('comics'));
+})->name('singlepage');
+
+Route::get('/singlepage11', function () {
+    $comics = config('comicsdb.comics.11');
+    return view('singlepage', compact('comics'));
+})->name('singlepage');
+
+Route::get('/singlepage12', function () {
+    $comics = config('comicsdb.comics.12');
     return view('singlepage', compact('comics'));
 })->name('singlepage');
