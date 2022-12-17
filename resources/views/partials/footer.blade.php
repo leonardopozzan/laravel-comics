@@ -1,5 +1,4 @@
 <?php 
-$linksImage = config('comicsdb.linksImage');
 $linksComics = config('comicsdb.linksComics');
 $linksShop = config('comicsdb.linksShop');
 $linksDc = config('comicsdb.linksDc');
@@ -7,16 +6,7 @@ $linksSites = config('comicsdb.linksSites');
 
 ?>
 
-<section class="icons-wrap">
-    <div class="icons">
-        @foreach ($linksImage as $link)
-        <div class="icon">
-            <img src="{{Vite::asset('resources/img/' . $link['url'] )}}" class="img-icon">
-            <a href="#">{{$link['text']}}</a>
-        </div>
-        @endforeach
-    </div>
-</section>
+
 
 <section class="links-footer">
     <div class="my-container links-wrap">
