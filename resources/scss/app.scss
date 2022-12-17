@@ -15,6 +15,8 @@ img{
 }
 ul{
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 a{
     text-decoration: none;
@@ -291,9 +293,34 @@ main{
         border-left: 1px solid #357739;
     }
     p{
+        color: #555555;
         font-size: 1.1rem;
         margin: 20px 0;
         line-height: 1.7rem;
         font-weight: 500;
+    }
+}
+#details{
+    margin-top: 50px;
+    border-top: 2px solid #E3E3E3;
+    background-color: #F6F6F6;
+    padding-bottom: 100px;
+    .my-border{
+        border-bottom: 2px solid #E3E3E3;
+    }
+    .title{
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #003F5E;
+        padding: 1.5rem 0;
+    }
+    .sub-title{
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #003F5E;
+    }
+    .text-blue{
+        color: #00A9DF;
+        font-weight: bold;
     }
 }
