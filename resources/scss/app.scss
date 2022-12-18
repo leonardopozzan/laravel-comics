@@ -302,11 +302,11 @@ main{
 }
 #details{
     margin-top: 50px;
-    border-top: 2px solid #E3E3E3;
+    border-top: 2px solid #D8D8D8;
     background-color: #F6F6F6;
     padding-bottom: 100px;
     .my-border{
-        border-bottom: 2px solid #E3E3E3;
+        border-bottom: 2px solid #D8D8D8;
     }
     .title{
         font-size: 1.4rem;
@@ -322,5 +322,39 @@ main{
     .text-blue{
         color: #00A9DF;
         font-weight: bold;
+    }
+}
+
+#icons-wrap{
+    border-top: 2px solid #D8D8D8;
+    background-color: #F6F6F6;
+    color: #D8D8D8;
+    .my-border{
+        border-left: 2px solid #D8D8D8;
+    }
+    .icons{
+        display: flex;
+    }
+    .icon{
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: calc(100% / 4);
+        padding-top: 1rem;
+        padding-right: 1rem;
+        .img-icon{
+            width: 45px;
+            align-self: center
+        }
+        a{
+            @include myText(0.9rem);
+            font-weight: bold;
+            padding-left: 0.8rem;
+            color: #9F9F9F;
+        }
+    }
+    .icon:last-child{
+        border-right: 2px solid #D8D8D8;
     }
 }

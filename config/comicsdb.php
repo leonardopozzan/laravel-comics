@@ -428,6 +428,25 @@ return [
                 "url"=> "#",
                 "active"=> false,
             ],
-          ]
+          ],
+          "linksSinglePage" => [
+              [
+                  "text"=> 'digital comics',
+                  "url"=> 'cta-icons1.png'
+              ],
+              [
+                  "text"=> 'shop dc',
+                  "url"=> 'cta-icons2.png'
+              ],
+              
+              [
+                  "text"=> 'comic shop locator',
+                  "url"=> 'cta-icons3.png'
+              ],
+              [
+                "text"=> 'subscription',
+                "url"=> 'cta-icons4.png'
+            ]
+              ]
 ];
 

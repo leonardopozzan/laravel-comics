@@ -1,5 +1,8 @@
 @extends('layout.app')
+<?php 
+$linksSinglePage = config('comicsdb.linksSinglePage');
 
+?>
 @section('content')
 <div class="blue"></div>
 <section class="my-container position-relative" id="singlepage">
@@ -25,48 +28,62 @@
     </div>
 </section>
 <section id="details">
-    <div class="my-container d-flex">
-        <div class="col-6 me-3">
-            <div class="title my-border">Talent</div>
-            <div class="d-flex justify-content-between py-2 my-border">
-                <div class="sub-title">Art by</div>
-                <div class="text-blue w-75">
-                    @foreach ($comics['artists'] as $key => $artist)
-                        @if($key == count($comics['artists']) - 1)
-                            {{$artist}}
-                        @else
-                            {{$artist}},
-                        @endif
-                    @endforeach
+    <div class="my-container ">
+        <div class="d-flex">
+            <div class="col-6 pe-3">
+                <div class="title my-border">Talent</div>
+                <div class="d-flex justify-content-between py-2 my-border">
+                    <div class="sub-title">Art by</div>
+                    <div class="text-blue w-75">
+                        @foreach ($comics['artists'] as $key => $artist)
+                            @if($key == count($comics['artists']) - 1)
+                                {{$artist}}
+                            @else
+                                {{$artist}},
+                            @endif
+                        @endforeach
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between py-2 my-border">
+                    <div class="sub-title">Written by</div>
+                    <div class="text-blue w-75">
+                        @foreach ($comics['writers'] as $key => $artist)
+                            @if($key == count($comics['writers']) - 1)
+                                {{$artist}}
+                            @else
+                                {{$artist}},
+                            @endif
+                        @endforeach
+                    </div>
                 </div>
             </div>
-            <div class="d-flex justify-content-between py-2 my-border">
-                <div class="sub-title">Written by</div>
-                <div class="text-blue w-75">
-                    @foreach ($comics['writers'] as $key => $artist)
-                        @if($key == count($comics['writers']) - 1)
-                            {{$artist}}
-                        @else
-                            {{$artist}},
-                        @endif
-                    @endforeach
+            <div class="col-6 ps-3">
+                <div class="title my-border">Specs</div>
+                <div class="d-flex py-2 my-border">
+                    <div class="sub-title col-4">Series:</div>
+                    <div class="col-4 text-uppercase text-blue">{{$comics['series']}}</div>
+                </div>
+                <div class="d-flex py-2 my-border">
+                    <div class="sub-title col-4">U.S. price:</div>
+                    <div class="col-4 text-uppercase fw-bold">{{$comics['price']}}</div>
+                </div>
+                <div class="d-flex py-2 my-border">
+                    <div class="sub-title col-4">On Sale Date:</div>
+                    <div class="col-4 text-uppercase fw-bold">{{$comics['sale_date']}}</div>
                 </div>
             </div>
         </div>
-        <div class="col-6 ms-3">
-            <div class="title my-border">Specs</div>
-            <div class="d-flex py-2 my-border">
-                <div class="sub-title col-4">Series:</div>
-                <div class="col-4 text-uppercase text-blue">{{$comics['series']}}</div>
+    </div>
+</section>
+<section id="icons-wrap">
+    <div class="my-container">
+        <div class="icons w-100">
+            @foreach ($linksSinglePage as $link)
+            <div class="icon my-border">
+                <a href="#">{{$link['text']}}</a>
+                <img src="{{Vite::asset('resources/img/' . $link['url'] )}}" class="img-icon">
             </div>
-            <div class="d-flex py-2 my-border">
-                <div class="sub-title col-4">U.S. price:</div>
-                <div class="col-4 text-uppercase fw-bold">{{$comics['price']}}</div>
-            </div>
-            <div class="d-flex py-2 my-border">
-                <div class="sub-title col-4">On Sale Date:</div>
-                <div class="col-4 text-uppercase fw-bold">{{$comics['sale_date']}}</div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
